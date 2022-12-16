@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ग्रामपंचायत केशवपुर मास्टर रजिस्टर</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+
+</head>
+
+<body>
+    <form action="pdf3.php" method="POST">
+        <div class="Container">
+            <div class="tital"><img src="logofinal.jpg" alt=""></div>
+            <div><label for="list">मकान नंबर देखे </label><a href="KESHAWPUR.pdf">click</a></div>
+            <div class="container">
+                <div>
+                    <label for="HNO">मकान संख्या :</label>
+                    <span>
+                      <input type="number" placeholder="0" id="HNO" name="HNO">
+                    </span>
+                </div>    
+            <div>
+                    <label for="mno">मोबाईल नंबर  :</label>
+                    <span><input name="mno" id="mno" type="number"placeholder="आवश्यक" onchange="valid(this.value)">
+                    </span>
+                    <div id="massage" style="color:red;"></div>
+            </div >
+            <div>
+                <label for="NO">सदस्यों की कुल संख्या :</label>
+                <span>
+                    <input type="number" name="NO" placeholder="लिखे" onchange="myFunction(this.value)">
+                </span>
+            </div>
+            <div >
+                <label for="gpn">ग्राम पंचायत का नाम :</label>
+                <span><input name="gpn" id="gpn" type="text" value="केशवपुर">
+                </span>
+            </div>
+            <div>
+                <label for="npn">न्याय पंचायत का नाम :</label>
+                <span><input name="npn" id="npn" type="text" placeholder="लिखे" value="देवचन्दपुर"/>
+                </span>
+            </div>
+            <div>
+                <label for="gn">ग्राम का नाम :</label>
+                <span>
+                    <select id="gn" name="gn" >
+                        <option value="--">चुने </option>
+                        <option value="केशवपुर">केशवपुर</option>
+                        <option value="चक-मुस्तफाबाद">चक-मुस्तफाबाद</option>
+                        <option value="चौकिया-याकूब">चौकिया-याकूब</option>
+                        
+                    </select>
+                </span>
+            </div>
+            <div>
+                <label for="mn">मजरे का नाम :</label>
+                <span><input name="mn" id="mn" type="text" placeholder="लिखे">
+                </span>
+            </div>
+            <div>
+                <label for="hh">मुखिया का नाम :</label>
+                <span><input name="hh" id="hh" type="text" placeholder="लिखे" >
+                </span>
+            </div>
+            <div>
+                <label for="cn">जाति  :</label>
+                <span><input name="cn" id="cn" type="text" placeholder="लिखे">
+                </span>
+            </div>
+            <div>
+                <label for="l">शौचालय अपात्र/पात्र:</label>
+                <span>
+                    <select id="l" name="l" >
+                        <option value="नहीं,apatra">नहीं ,अपात्र </option>
+                        <option value="नहीं,patra">नहीं ,पात्र </option>
+                        <option value="हा,SBM">हाँ ,SBM</option>
+                        <option value="हा,SBM-2">हाँ ,SBM-2</option>
+                        <option value="हा,LOB">हाँ ,LOB</option>
+                        <option value="हा,LOB-2">हाँ ,LOB-2</option>
+                        <option value="हा,NLOB">हाँ ,NLOB</option>
+                        
+                    </select>
+                </span>
+            </div>
+            <div>
+                <label for="A">आवास की स्थिति :</label>
+                <span>
+                    <select id="A" name="A" >
+                        <option value="पक्का">पक्का</option>
+                        <option value="कच्चा,WAITTING LIST">कच्चा,प्रतिछा सूची मे नाम दर्ज है|</option>
+                        <option value="कच्चा,REGISTER">कच्चा,आवास मे नाम दर्ज है|</option>
+                        <option value="हा,PM">प्राप्त -PM</option>
+                        <option value="हा,CM">प्राप्त -CM</option>
+                        <option value="हा,INDIRA">प्राप्त -इंदिरा </option>
+                        <option value="हा,LOHIYA">प्राप्त -लोहिया </option> 
+                    </select>
+                </span>
+            </div>
+            <div>
+                <label for="S">सौभाग्य योजना  :</label>
+                <span>
+                    <select id="S" name="S">
+                        <option value="नहीं">नहीं</option>
+                        <option value="YES">हाँ</option>
+                        <option value="OTHER">अन्य</option>
+                        
+                    </select>
+                </span>
+            </div>
+            <div>
+                <label for="U">उज्ज्वला योजना  :</label>
+                <span>
+                    <select id="U" name="U">
+                        <option value="नहीं">नहीं</option>
+                        <option value="YES">हाँ</option>
+                        <option value="OTHER">अन्य</option>
+                        
+                    </select>
+                </span>
+            </div>
+            <br>
+            <div id="gardian" name="head" class="person">  
+            </div>
+            <br>
+            <div id="sb" class="f">
+                <input type="submit" name="submit" id="submit" value="Submit" name="submit">
+            </div>
+            <br><br>
+            <div>
+                <input type="button" value="RESET" onClick="window.location.reload()" id="reset">
+            </div>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
